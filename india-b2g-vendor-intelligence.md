@@ -151,6 +151,51 @@ The research deliberately flagged gaps. The highest-value follow-ups:
 
 ---
 
+---
+
+# Part B — Ownership, Topline & Documented Failures
+
+> *Added from a second verified research pass (112 agents; 78 claims extracted, 25 adversarially verified, **25/25 confirmed, 0 refuted**). Financials current as of June 2026 and will move with new quarterly disclosures.*
+
+## B.1 — Ownership & revenue of the named vendors
+
+| Company | Listed? | Ownership / control | Latest revenue | Net profit | Confidence |
+|---|---|---|---|---|---|
+| **ABM Knowledgeware** | Yes (BSE 531161) | **Rane family**, 66.92% promoter (Prakash Baburao Rane ~47.71%, Supriya Prakash Rane ~12.27%); **0% institutional** — closely family-held | **FY25 ₹104.84 cr** (+7.5% YoY) | **₹17.10 cr** (+11.6%) | High (2+ aggregators) |
+| **Allied Digital Services** | Yes (BSE/NSE, ADSL) | **Shah family**, 51.07% promoter (Nitin Dhanji Shah ~33.31%), declining from 52.6% (Jun 2023) | **FY26 ₹968 cr** (FY24 687 → FY25 807 → FY26 968) | ~**₹36 cr** | High — ⚠️ *qualified* audit opinion (Singhi & Co.), one-time ₹36 cr provision Q4 FY26 (hits profit quality, not topline) |
+| **Silver Touch Technologies** | Yes (NSE SILVERTUC / BSE 543525) | Founder-promoter **Vipul H. Thakkar** (Chairman & MD); co-founders Jignesh Patel, Minesh Doshi, Palak Shah (whole-time directors). Founded 1995, HQ Ahmedabad | **FY25 ₹288.38 cr** (+28.56%); **FY26 ₹341.99 cr** | n/a in pass | High |
+| **CSC e-Governance Services** | No — **Govt SPV** | **MeitY-owned** special-purpose vehicle (GoI holds 1 share); implements the Common Service Centres scheme. CIN U74999DL2009PLC192275 | **FY24 ₹1,753.56 cr** | **₹131.67 cr** | High (CAG Report No. 5 of 2026, primary) |
+| **Corporate Infotech (CIPL)** | No (private) | **Unconfirmed.** CIN U72900DL2007PTC162708 | Unknown | — | Won ₹87 cr BiharOne (2026) |
+| **CMS Computers India** | No (private) | **Unconfirmed.** CIN U72900MH1991PTC061938 | Unknown | — | Gap — paid MCA filings only |
+| **Vayam Technologies** | No (private) | **Unconfirmed.** CIN U74900DL2000PLC107066 | Unknown | — | Gap — paid MCA filings only |
+| **Pratham Software** | No (private) | **Unconfirmed** | Unknown | — | Gap |
+
+**Reading it:** the reachable specialist tier is **family/founder-controlled and modestly sized** (~₹100–340 cr revenue; the ₹1,750 cr outlier is the government's own SPV, not a competitor you bid against). No PE-backed national champions here — these are closely-held firms running on long government relationships. That is simultaneously the credibility bar a new entrant must clear *and* evidence the tier is beatable. The three listed firms (ABM, Allied Digital, Silver Touch) have fully public promoters, shareholding, and audited financials; the private firms (CIPL, CMS, Vayam, Pratham) need paid MCA21 filings to pierce — **flagged as the remaining gap.**
+
+*Caveat: listed-firm financials here come from exchange-filing aggregators (Screener.in, Trendlyne, scanx.trade), corroborated across 2+ sources but not traced to every raw BSE/NSE filing.*
+
+## B.2 — Documented platform failures (all primary-sourced)
+
+| Platform | Builder | What went wrong | Source |
+|---|---|---|---|
+| **Income Tax e-filing portal 2.0** | **Infosys** | Launched 7 Jun 2021; immediate blank screens, login failures, missing OTPs; two-day outage 21–22 Aug 2021. FM Sitharaman criticized Infosys 8 Jun; CEO **Salil Parekh summoned 23 Aug** with a 15 Sep fix deadline | BoomLive, OnManorama, Scroll, Business Standard |
+| **GST portal (GSTN)** | **Infosys** (~₹1,320 cr, 2015) | CAG: GST **Refund module lacked adequate controls** → refunds on unverified input-tax-credit; **522 cases, ₹185.28 cr** documented | CAG Report No. 1 of 2022 (primary) |
+| **e-Way Bill system** | **NIC Bengaluru** (under GSTN) | CAG: data-validation gaps — 32 intra-Karnataka trips logged >3,500 km, 524 inter-state <10 km, 2,212 multi-vehicle qty mismatches, **39,750** freely-altered units of measurement | CAG Report No. 1 of 2021 (primary) |
+| **CSC Digital Seva Portal** | **CSC-SPV** (govt) | Full integration of state e-services done in only **12 states + 2 UTs** by Mar 2024; "fragmented implementation"; many CSCs inactive | CAG Report No. 5 of 2026; MediaNama (Apr 2026) |
+| **Passport Seva** | **TCS** | Reported nationwide server crash, Apr 2025 (lower-reliability press; verify) | Business Standard (flagged) |
+
+### The ₹4,242 cr vs ₹164.5 cr lesson (use this in pitches)
+The Income Tax portal is routinely cited as a "₹4,200 cr failure." That conflates two numbers:
+- **₹4,241.97 cr** = total *approved project outlay* for the entire Integrated E-filing + **CPC 2.0** program (build + the return-processing engine + ~8.5 yrs O&M + infrastructure) — **not** the website's price.
+- **₹164.5 cr** = what the government had *actually paid Infosys* for developing the portal (Jan 2019–Jun 2021), per a Lok Sabha reply by MoS Finance Pankaj Chaudhary.
+
+**The takeaway is sharper than "incumbents overcharge":** even a *reasonable* build budget (~₹164 cr) bought a product that launched broken from India's second-largest IT firm. The defensible market wedge is **quality-and-reliability-led delivery**, not undercutting on price — and the evidence above (a top SI publicly failing) is more persuasive to a government buyer than a price argument.
+
+### Honest gap on niche-vendor failures
+**No** verifiable, citable failure was confirmed for any niche specialist (Silver Touch, CMS, Vayam, ABM, CIPL, Allied Digital, Pratham). The likely reason is **under-reporting** — small state/municipal/PSU portal failures rarely reach national press or central CAG audits — **not** clean records. Documenting *their* failures requires the scaled site-screening pass (crt.sh subdomain enumeration → TLS/HTTPS/staleness/defacement/GIGW scans) plus **state Accountant-General audit reports** and targeted RTIs.
+
+---
+
 ## Appendix — source list
 
 **Primary (government / vendor official):**
